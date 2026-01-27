@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Corey Bates Jr Photography Website</title>
+</head>
+
+<body>
+    <div class="app"> 
+    <h1>Corey Bates Jr Photography</h1>
+
+    <h2> I've made this website as a way to showcase my photography to others who may be interested in my work and my services</h2>
+    
+    <nav>
+        <a href="#gallery">Gallery></a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <section id="gallery-grid">
+        <h3>Gallery</h3>
+        <img src="images/photo1.jpg" loading="lazy" alt="Photo 1">
+        <img src="images/photo2.jpg" loading="lazy" alt="Photo 2">
+        <img src="images/photo3.jpg" loading="lazy" alt="Photo 3">
+        <img src="images/photo4.jpg" loading="lazy" alt="Photo 4">
+        <img src="images/photo5.jpg" loading="lazy" alt="Photo 5">
+        <img src="images/photo6.jpg" loading="lazy" alt="Photo 6">
+    </section>
+
+    <!-- Lightbox -->
+    <div id="lightbox">
+    <img id="lightbox-img">
+    <span class="arrow left">&#10094;</span>
+    <img id="lightbox-img">
+    <span class="arrow right">&#10095;</span>
+    </div>
+
+    <section id="about">
+        <h3>About</h3>
+        <p>I’m a photographer focused on capturing moments, cityscape and cars.</p>
+    </section>
+
+    <section id="Contact">
+        <h3>Contact</h3>
+        <p>
+        Instagram: @cmbjohotos<br>
+        LinkedIn: @corey-bates-jr
+        </p>
+    </section> 
+    </div>
+</body>  
+</html>
