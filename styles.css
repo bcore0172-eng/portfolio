@@ -11,6 +11,10 @@ align-items: center;
 scroll-behavior: smooth;
 }
 
+body{
+display: block;
+}
+
 h1 {
 font-weight: 500;
 
@@ -117,17 +121,15 @@ left: 25%; /* keep it centered */
 }
 
 .gallery-grid {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(300px, 1fr)); /* 3 columns, each at least 300px */
-    gap: 20px;
-    margin: 24px auto; /* center the grid horizontally */
-    justify-content: center;
-    max-width: 1040px; /* keeps gallery from stretching too wide */
-}  
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+gap: 15px;
+margin-top: 20px;
+}
 
 @media (max-width: 768px) {
 .gallery-grid {
-    grid-template-columns: repeat(2, minmax(220px, 1fr));
+    grid-template-columns: repeat(2, 1fr);
 }
 .app {
     padding: 20px;
@@ -147,13 +149,13 @@ left: 25%; /* keep it centered */
 }
 
 .gallery-grid img {
-    width: 100%;
-    aspect-ratio: 4 / 3; /* rectangular landscape thumbnails */
-    object-fit: cover; /* center-crop to fill the rectangle without stretching */
-    border-radius: 8px;
-    cursor: pointer;
-    transition: transform 0.3s ease, box-shadow 0 3s ease;
-} 
+width: 100%;
+height: 300px; /* keeps all images same box height */
+object-fit: cover; /* crops images instead of stretching them */
+border-radius: 8px;
+cursor: pointer;
+transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
 
 .gallery-grid img:hover {
 transform: scale(1.08);
