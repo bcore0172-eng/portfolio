@@ -1,6 +1,6 @@
 /* Full-page background */
 html, body {
-  height: 100%;           /* ensures it covers the full viewport */
+height: 100%;           /* ensures it covers the full viewport */
 margin: 0;
 padding: 0;
 background: linear-gradient(135deg, #ffe5d4, #ff9474, #fe6f65); 
@@ -55,7 +55,7 @@ color: #777;
 
 .app {
 max-width: 1000px;
-  margin: 40px auto; /* centers horizontally */
+margin: 40px auto; /* centers horizontally */
 padding: 60px;
 background: rgba(255, 255, 255, 0.7);
 border-radius: 50px;
@@ -63,7 +63,7 @@ box-shadow: 0 8px 20px rgba(0,0,0,0.15);
 text-align: center;
 backdrop-filter: blur(10px);
 color: #333;
-  min-height: 60vh; /* lets app grow and prevents flex alignment issues */
+min-height: 60vh; /* lets app grow and prevents flex alignment issues */
 }
 
 section {
@@ -141,10 +141,11 @@ margin-top: 20px;
 .gallery-grid {
     grid-template-columns: 1fr;
 }
+
 .app {
-    padding: 15px;
-    margin: 10px auto;
-    min-height: auto;
+padding: 15px;
+margin: 10px auto;
+min-height: auto;
 }
 }
 
@@ -194,6 +195,46 @@ color: #fff;
 text-align: center;
 margin-top: 15px;
 font-size: 18px;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  max-width: 500px;
+  width: 100%;       /* responsive on smaller screens */
+  gap: 12px;
+  margin: 0 auto 20px auto; /* centers the form horizontally */
+  padding: 20px;      /* space inside the form */
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 12px; 
+  font-size: 16px; 
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  resize: vertical; /* allows vertical resizing for textarea */
+}
+
+.contact-form textarea {
+min-height: 120px; 
+}
+
+.contact-form button {
+padding: 12px;
+font-size: 16px;
+background-color: #333;
+color: #fff;
+border: none;
+border-radius: 6px;
+cursor: pointer;
+}
+
+.contact-form button:hover {
+background-color: #555;
 }
 
 
