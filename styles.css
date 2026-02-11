@@ -150,16 +150,20 @@ min-height: auto;
 }
 
 .gallery-grid img {
-width: 100%;
-height: 300px; /* keeps all images same box height */
-object-fit: cover; /* crops images instead of stretching them */
+aspect-ratio: 4 / 3;
+height: auto;
+display: block;
 border-radius: 8px;
 cursor: pointer;
 transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+.gallery-grid div {
+overflow: hidden;
+}
+
 .gallery-grid img:hover {
-transform: scale(1.08);
+transform: scale(1.04);
 box-shadow: 0 12px 30px rgba(0,0,0,0.35);
 }
 
@@ -198,25 +202,25 @@ font-size: 18px;
 }
 
 .contact-form {
-  display: flex;
-  flex-direction: column;
-  max-width: 500px;
-  width: 100%;       /* responsive on smaller screens */
-  gap: 12px;
-  margin: 0 auto 20px auto; /* centers the form horizontally */
-  padding: 20px;      /* space inside the form */
-  background-color: #fff;
-  border-radius: 12px;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+display: flex;
+flex-direction: column;
+max-width: 500px;
+width: 100%;       /* responsive on smaller screens */
+gap: 12px;
+margin: 0 auto 20px auto; /* centers the form horizontally */
+padding: 20px;      /* space inside the form */
+background-color: #fff;
+border-radius: 12px;
+box-shadow: 0 6px 18px rgba(0,0,0,0.12);
 }
 
 .contact-form input,
 .contact-form textarea {
-  padding: 12px; 
-  font-size: 16px; 
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  resize: vertical; /* allows vertical resizing for textarea */
+padding: 12px; 
+font-size: 16px; 
+border: 1px solid #ccc;
+border-radius: 6px;
+resize: vertical; /* allows vertical resizing for textarea */
 }
 
 .contact-form textarea {
