@@ -54,7 +54,7 @@ const contactForm = document.getElementById('contact-form');
 contactForm.addEventListener('submit', function(e) {
   e.preventDefault(); // stop default submit
 
-    emailjs.sendForm('service_yhny8s8', 'YOUR_TEMPLATE_ID', this, 'Nor7E6NohTvLJoILN')
+    emailjs.sendForm('service_yhny8s8', 'template_aotl3vs', this, 'Nor7E6NohTvLJoILN')
     .then(() => {
         alert("Message sent! Thanks for reaching out.");
       contactForm.reset(); // clears the form

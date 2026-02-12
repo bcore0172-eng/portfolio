@@ -150,13 +150,12 @@ min-height: auto;
 }
 
 .gallery-grid img {
-aspect-ratio: 4 / 3;
-height: auto;
-display: block;
+width: 100%;
+aspect-ratio: 4 / 3;   /* keeps uniform sizing */
+object-fit: cover;     /* keeps clean crop */
 border-radius: 8px;
 cursor: pointer;
 transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
 
 .gallery-grid div {
 overflow: hidden;
@@ -201,6 +200,10 @@ margin-top: 15px;
 font-size: 18px;
 }
 
+#contact p {
+margin: 5px 0;
+}
+
 .contact-form {
 display: flex;
 flex-direction: column;
@@ -241,6 +244,14 @@ cursor: pointer;
 background-color: #555;
 }
 
+.social-links {
+margin-top: 10px;
+}
+
+.social-links a {
+display: inline-block;
+margin: 5px 10px;
+}
 
 .arrow {
 position: absolute;
