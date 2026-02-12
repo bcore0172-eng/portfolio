@@ -3,7 +3,7 @@ html, body {
 height: 100%;           /* ensures it covers the full viewport */
 margin: 0;
 padding: 0;
-background: linear-gradient(135deg, #ffe5d4, #ff9474, #fe6f65); 
+  background: radial-gradient(circle at top, #1a1a1a 0%, #0d0d0d 70%);
 font-family: Montserrat, sans-serif;
 color: #333;
 justify-content: center;   /* center horizontally */
@@ -15,17 +15,10 @@ body{
 display: block;
 }
 
-h1 {
-font-weight: 500;
-
-color:#333
-}
-
-h2, h3 {
-font-weight: 500;
-color: #555;
-padding:20px;
-font-size: 1.4rem;
+h1, h2, h3 {
+  font-weight: 500;
+  padding: 20px;
+  color: #818080;
 }
 
 p {
@@ -34,14 +27,25 @@ line-height: 1.6;
 color: #666;
 }
 
+.tagline {
+  font-size: 1.1rem;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  font-weight: 600;
+  opacity: 0.8;
+  margin-top: 8px;
+}
+
 .top-banner {
-margin-bottom: 30px;
+margin-bottom: 40px;
 }
 
 .top-banner h1 {
-font-size: 2rem;
-font-weight: 500;
-margin: 0;
+  font-size: 3rem;
+  font-weight: 600;
+  margin: 0;
+  letter-spacing: 1px;
+  color: #f5f5f5;
 }
 
 .top-banner p {
@@ -52,12 +56,12 @@ text-transform: uppercase;
 color: #777;
 }
 
-
 .app {
 max-width: 1000px;
 margin: 40px auto; /* centers horizontally */
 padding: 60px;
-background: rgba(255, 255, 255, 0.7);
+background: rgba(25, 25, 25, 0.9);
+color: #f0f0f0;
 border-radius: 50px;
 box-shadow: 0 8px 20px rgba(0,0,0,0.15);
 text-align: center;
@@ -68,6 +72,13 @@ min-height: 60vh; /* lets app grow and prevents flex alignment issues */
 
 section {
 margin-top: 60px;
+}
+
+section h3 {
+  font-size: 1.2rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #aaa;
 }
 
 #contact a {
@@ -123,7 +134,7 @@ left: 25%; /* keep it centered */
 .gallery-grid {
 display: grid;
 grid-template-columns: repeat(3, 1fr);
-gap: 15px;
+gap: 10px;
 margin-top: 20px;
 }
 
@@ -150,20 +161,19 @@ min-height: auto;
 }
 
 .gallery-grid img {
-width: 100%;
-aspect-ratio: 4 / 3;   /* keeps uniform sizing */
-object-fit: cover;     /* keeps clean crop */
-border-radius: 8px;
-cursor: pointer;
-transition: transform 0.3s ease, box-shadow 0.3s ease;
-
-.gallery-grid div {
-overflow: hidden;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  will-change: transform;
+  backface-visibility: hidden;
 }
 
+
 .gallery-grid img:hover {
-transform: scale(1.04);
-box-shadow: 0 12px 30px rgba(0,0,0,0.35);
+  transform: scale(1.04);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.35);
 }
 
 #lightbox {
@@ -198,10 +208,6 @@ color: #fff;
 text-align: center;
 margin-top: 15px;
 font-size: 18px;
-}
-
-#contact p {
-margin: 5px 0;
 }
 
 .contact-form {
@@ -250,7 +256,11 @@ margin-top: 10px;
 
 .social-links a {
 display: inline-block;
-margin: 5px 10px;
+margin: 0 10px;
+}
+
+.social-links p {
+margin-bottom: 5px;
 }
 
 .arrow {

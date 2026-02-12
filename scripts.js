@@ -43,11 +43,6 @@ document.addEventListener("keydown", e => {
     if (e.key === "Escape") lightbox.style.display = "none";
 });
 
-contactForm.addEventListener('submit', function(e) {
-    e.preventDefault(); // prevents actual submission
-    alert("Thanks! Please DM me on Instagram for inquiries.");
-});
-
 // Replace with your actual EmailJS info
 const contactForm = document.getElementById('contact-form');
 
